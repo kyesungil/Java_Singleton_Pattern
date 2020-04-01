@@ -3,7 +3,7 @@ package Singleton_Pattern;
 public class SingletonEx {
 
 	public static void main(String[] args) {
-		//private »ı¼ºÀÚ
+		//private ìƒì„±ì
 		//SystemSpeaker c1 = new SystemSpeaker();
 
 		SystemSpeaker c1 = SystemSpeaker.getInstance();
@@ -19,7 +19,7 @@ public class SingletonEx {
 		System.out.println("c2 Volume :" + c2.getVolume()); // 10
 		
 		if(c1 == c2) {
-			System.out.println("c1 == c2"); // Ãâ·Â
+			System.out.println("c1 == c2"); // ì¶œë ¥
 		} else {
 			System.out.println("c1 != c2");
 		}
@@ -31,13 +31,13 @@ class SystemSpeaker {
 	private static SystemSpeaker INSTANCE;
 	private int Volume;
 	
-	// privateÀ¸·Î ¿ÜºÎ¿¡¼­ new¿¬»êÀÚ·Î ÀÎ½ºÅÏ½º »ı¼º ¸·±â 
+	// privateìœ¼ë¡œ ì™¸ë¶€ì—ì„œ newì—°ì‚°ìë¡œ ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ë§‰ê¸° 
 	private SystemSpeaker() {
 		this.Volume = 5;
 	}
 	
 	public static SystemSpeaker getInstance() {
-		// ÃÖÃÊ·Î ºÒ¸± ¶§, null °ªÀÌ¸é ÀÎ½ºÅÏ½º »ı¼º 
+		// ìµœì´ˆë¡œ ë¶ˆë¦´ ë•Œ, null ê°’ì´ë©´ ì¸ìŠ¤í„´ìŠ¤ ìƒì„± 
 		if(INSTANCE == null) {
 			INSTANCE = new SystemSpeaker();
 		}
@@ -52,3 +52,4 @@ class SystemSpeaker {
 		this.Volume = volume;
 	}
 }
+//<ì¶œì²˜ : https://youtu.be/5jgpu9-ywtY>
